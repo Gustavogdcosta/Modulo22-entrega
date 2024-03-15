@@ -1,0 +1,72 @@
+@use 'variaveis';
+
+.main{
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    &__subtitle{
+        margin-top: 40px;
+    }
+
+}
+
+.location {
+
+    &__info{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 80px;
+
+        &__item {
+            margin: auto 40px;
+
+            &__head{
+                text-decoration: underline;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__button{
+
+        @media (max-width:640px){
+            display: flex;
+            margin: 0;
+        }
+
+        &__confirm{
+            background-color: variaveis.$corbgbutton;
+            padding: 16px;
+            border-radius: 20px;
+            margin: 80px 20px 0 0;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.2;
+            }
+    
+        }
+    
+        &__denied{
+            background-color: variaveis.$corbgdenied;
+            padding: 16px;
+            border-radius: 20px;
+            margin: 80px 0 0 20px;
+        }
+    }
+
+    
+}
+
+#contador {
+    margin: 20px 120px 0;
+    color: #db6110;
+    border: 3px dashed #db6110;
+    padding: 30px;
+    font-size: 40px;
+
+    @media (max-width:640px){
+        margin: 12px 0;
+    }
+}

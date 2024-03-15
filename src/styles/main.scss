@@ -1,0 +1,50 @@
+@use 'variaveis';
+@use 'content';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Rotobo, sans-serif;
+    list-style: none;
+    color: variaveis.$cortexto;
+    text-align: center;
+}
+body{
+    background-image: url(../images/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variaveis.$corsecund;
+        content: '';
+        opacity: 0.5;
+
+        @media (max-width:640px){
+            height: 130%;
+        }
+    }
+
+    
+}
+.container  {
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+
+    @media (max-width:640px){
+        max-width: 80%;
+    }
+    
+    @media screen and (max-width: 1024px) and (min-width:641px) {
+        max-width: 90%;
+    }
+}
